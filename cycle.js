@@ -178,5 +178,11 @@ if (typeof JSON.retrocycle !== "function") {
 }
 
 // =================comstume code that export functions========================
-exports.retrocycle = JSON.retrocycle;
-exports.decycle    = JSON.decycle;
+// function come from
+//  https://stackoverflow.com/questions/17575790/environment-detection-node-js-or-browser
+var isNode=new Function("try {return this===global;}catch(e){return false;}");
+// tests if global scope is binded to "global"
+if(isNode()) {
+    exports.retrocycle = JSON.retrocycle;
+    exports.decycle    = JSON.decycle;
+}

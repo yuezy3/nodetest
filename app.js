@@ -9,9 +9,9 @@ const port = 3000;
 let handleFunc = (req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    let reqJOSN = {};
-    Object.keys(req).map((reqkey)=>{reqJOSN[reqkey]=req[reqkey];});
-    res.write(JSON.stringify(reqJOSN));
+    // let reqJOSN = {};
+    // Object.keys(req).map((reqkey)=>{reqJOSN[reqkey]=req[reqkey];});
+    res.write(JSON.stringify(cycle.decycle(req)));
     res.end('Hello World\n');
   }
 
