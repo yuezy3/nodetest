@@ -9,3 +9,5 @@ var result = md.render(str);
 
 
 fs.writeFileSync('data.html',result);
+
+exports.markd = result;
