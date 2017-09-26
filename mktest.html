@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="katex.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
     <link rel="stylesheet" href="prism.css">
     <style>
@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="markdown"></div>
+
     <script src="prism.js"></script>
     <script type="text/javascript">
     var mdTaker = new XMLHttpRequest();
@@ -19,6 +20,7 @@
     mdTaker.addEventListener('loadend',function(e){
         console.log("got data!");
         document.getElementById("markdown").innerHTML=this.responseText;
+        Prism.highlightAll(); //using prism.js to highlight code.
     });
     mdTaker.open('get',"xxx");
     mdTaker.send();

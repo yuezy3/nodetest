@@ -4,7 +4,9 @@ this line is an pro...
 
 how about link [here](http://www.bing.com)?
 
-how about math: $a^2 + b^2 = c^2$.
+how about math: 
+$a^2 + b^2 = c^2$
+$$\nabla \cdot \vec{\mathbf{B}}  = 0$$
 
 ---
 __Advertisement :)__
